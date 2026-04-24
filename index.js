@@ -1,4 +1,12 @@
+const { Telegraf } = require("telegraf");
+
+// ✅ FIRST: create bot
+const bot = new Telegraf(process.env.BOT_TOKEN);
+
+// ✅ THEN: use it
 bot.start((ctx) => {
+  console.log("START TRIGGERED");
+
   ctx.reply("Open App 👇", {
     reply_markup: {
       inline_keyboard: [[
@@ -12,3 +20,8 @@ bot.start((ctx) => {
     }
   });
 });
+
+// ✅ FINALLY: launch
+bot.launch({ polling: true });
+
+console.log("Bot running...");
