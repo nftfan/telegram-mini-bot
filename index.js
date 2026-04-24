@@ -9,7 +9,7 @@ bot.start((ctx) => {
         {
           text: "📍 Open Map",
           web_app: {
-            url: "https://www.leuvenflyers.com/dotmini"
+            url: "https://www.leuvenflyers.com/ms400"
           }
         }
       ]]
